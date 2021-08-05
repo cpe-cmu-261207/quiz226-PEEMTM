@@ -33,8 +33,17 @@ btn_toggle.onclick = () => {
 btn_search.onclick = () => {
   texts.style.background = color.value
   const myArr = texts.split(" ")
-  const out = myArr.fliter(text => text.length > length).map(text => text.style.background = color.value)
-  texts.innerHTML = out
+  const out = myArr.fliter(text => text.length > length)
+  const a = []
+  for(let i = 0; i <= out.length; i++){
+    a.push = texts.indexOf(out[i])
+  }
+  for(let i = 0; i <= a.length; i++)
+    for(let j = a[i]; j <= texts.length; j++){
+      for(let k = j; k <= length; k++){
+        texts[k].style.background = color.value
+      }
+    }
 }
 
 btn_reset.onclick = () => {
